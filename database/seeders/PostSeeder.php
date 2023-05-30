@@ -30,6 +30,7 @@ class PostSeeder extends Seeder
                 "count" => mt_rand(1, 5),
                 "latest" => $faker->dateTime()
             ];
+            //<50 kata maka cepat, dan seterusnya
             if (str_word_count($body) < 50 ) {
                 $postData["category_id"] = 1;
             } elseif (str_word_count($body) > 50 && str_word_count($body) < 200){

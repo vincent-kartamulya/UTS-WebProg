@@ -9,7 +9,7 @@ class DetailController extends Controller
 {
     public function index($id){
         $post = Post::find($id);
-
+        //jika dikunjungi maka countnya tambah 1 dan ubah timeny 
         $post->count++;
         $post->latest = now();
         $post->save();
